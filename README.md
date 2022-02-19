@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# 리액트 +타입스크립트 + prettier + eslint 기초 세팅
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 설치 방법
 
-## Available Scripts
+### 1. 폴더의 깃 삭제하기
 
-In the project directory, you can run:
+  <img src="https://user-images.githubusercontent.com/98315458/151786608-ee7bde50-49ae-4419-a6e3-6b57decaa045.png"/>
 
-### `npm start`
+### 2. package.json의 name(이름) 바꾸어주기
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ <img src="https://user-images.githubusercontent.com/98315458/151786905-a6a8c79d-0909-401f-b223-c94dfdee9d12.png"/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 3. package-lock.json 삭제하기
 
-### `npm test`
+ <img src="https://user-images.githubusercontent.com/98315458/151787035-59ae7897-b1f2-4c08-a774-5845c3fdc016.png"/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. npm install , npm start로 작동하는지 테스트,세팅하기
 
-### `npm run build`
+```
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 폴더 구조
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+src
+ ┣ assets
+ ┃ ┗ images
+ ┣ components
+ ┣ constants
+ ┣ hooks
+ ┣ styles
+ ┃ ┣ globalStyle.ts
+ ┃ ┣ index.ts
+ ┃ ┣ styled.d.ts
+ ┃ ┗ theme.ts
+ ┣ utils
+ ┣ App.tsx
+ ┗ index.tsx
+```
 
-### `npm run eject`
+- 폴더명과 파일 이름은 바꾸어야 합니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# 세팅
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## styled-component
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    ThemeProvider 와 GlobalStyle 을 적용한 상태입니다.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## .eslintrc 와 .prettierrc 을 적용한 상태입니다.
 
-## Learn More
+## tsconfig.json 세팅
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    tsconfig.json 파일을 통해 baseUrl : "src" 폴더로 해놓아서 절대경로를 이용하는 상태입니다.
